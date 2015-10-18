@@ -1,0 +1,16 @@
+[
+{
+  "modid": "PlayerAugments",
+  "name": "Player Augments",
+  "description": "Augment your player to do bigger and better things.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["tayjay"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
