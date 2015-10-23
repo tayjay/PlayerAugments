@@ -1,5 +1,8 @@
 package com.tayjay.playeraugments.init;
 
+import com.tayjay.playeraugments.item.ItemAugment;
+import com.tayjay.playeraugments.item.ItemBrainImplant;
+import com.tayjay.playeraugments.item.ItemEnergyCell;
 import com.tayjay.playeraugments.item.ItemPA;
 import com.tayjay.playeraugments.reference.Reference;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -15,13 +18,18 @@ public class ModItems
     /*
      * Declare all Items
      */
+    //public static ItemPA augment;
+    public static ItemPA brainImplant;
+    public static ItemPA energyCell;
 
     /**
      * Initiate the Item objects
      */
     public static void init()
     {
-
+        //augment = new ItemAugment();
+        brainImplant = new ItemBrainImplant();
+        energyCell = new ItemEnergyCell();
     }
 
     /**

@@ -1,0 +1,27 @@
+#en_US Localization File
+
+#Keys Localization
+keys.playeraugments.category=Player Augments
+
+
+#Creative Tabs Localizations
+itemGroup.playeraugments=Player Augments
+
+# Item Localization
+item.playeraugments:energyCell.name=
+
+
+#Block Localization
+tile.playeraugments:areaEffect.name=Area Effect
+
+
+#GUI Localization
+gui.playeraugments.camoMine.timer=Timer:%s ticks
+
+#Augment Localization
+augment.energy.energyCell0.name=Basic Energy Cell
+augment.energy.energyCell1.name=Advanced Energy Cell
+augment.energy.energyCell2.name=Ultimate Energy Cell
+augment.energy.energyCell3.name=Quantum Energy Cell
+augment.energy.energyCell4.name=Infinity Energy Cell
+augment.brain.brainImplant0.name=Basic Brain Implant

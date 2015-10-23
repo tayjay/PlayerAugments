@@ -1,5 +1,8 @@
 package com.tayjay.playeraugments;
 
+import com.tayjay.playeraugments.augment.AugmentRegistry;
+import com.tayjay.playeraugments.init.ModBlocks;
+import com.tayjay.playeraugments.init.ModItems;
 import com.tayjay.playeraugments.proxy.CommonProxy;
 import com.tayjay.playeraugments.reference.Reference;
 import cpw.mods.fml.common.Mod;
@@ -49,7 +52,10 @@ public class PlayerAugments
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+        AugmentRegistry.init();
 
+        ModItems.init();
+        ModBlocks.init();
     }
 
     /**

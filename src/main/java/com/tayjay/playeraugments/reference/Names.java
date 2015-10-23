@@ -12,7 +12,9 @@ public class Names
 
     public static final class Items
     {
-
+        public static final String AUGMENT = "augment";
+        public static final String ENERGY_CELL = "energyCell";
+        public static final String BRAIN_IMPLANT = "brainImplant";
     }
 
     public static final class TileEntities
