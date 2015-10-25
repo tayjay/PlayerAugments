@@ -1,6 +1,10 @@
 package com.tayjay.playeraugments.augment;
 
+import com.tayjay.playeraugments.reference.Reference;
+import com.tayjay.playeraugments.util.LogHelper;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.client.resources.I18n;
+import net.minecraft.util.IIcon;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +21,7 @@ public class Augment
     private int tier;
     private final String[] types = {"brain","eye","skull","skeleton","arm","heart","energy","leg","dna","special"};
     private List<String> temp = new ArrayList<String>();
+    private IIcon icon;
     //private String unlocalizedName;
 
     public Augment(int id,String name,int tier, int typeId)
@@ -62,5 +67,20 @@ public class Augment
     public String[] getTypes()
     {
         return types;
+    }
+
+    public IIcon getIcon()
+    {
+        if(icon!=null)
+        {
+            return icon;
+        }
+        LogHelper.error(augmentName+"\'s icon is null!");
+        return null;
+    }
+
+    public void registerIcon(IIconRegister iconRegister)
+    {
+        icon = iconRegister.registerIcon(Reference.MOD_ID_LOWER+":"+augmentName);
     }
 }

@@ -7,7 +7,7 @@ public class AugmentEnergy extends Augment
 {
     public AugmentEnergy(int id, String name, int tier)
     {
-        super(id, name, tier, 6);
+        super(id, name, tier, AugmentRegistry.Ids.ENERGY);
     }
 
     @Override

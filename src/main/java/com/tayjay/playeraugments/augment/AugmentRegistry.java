@@ -1,5 +1,7 @@
 package com.tayjay.playeraugments.augment;
 
+import net.minecraft.client.Minecraft;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +17,7 @@ public class AugmentRegistry
     public static Augment brainImplant2;
     public static Augment brainImplant3;
     public static Augment brainImplant4;
+    public static Augment brainImplant5;
     public static Augment brainImplantCreative;
     public static Augment energyCell0;
     public static Augment energyCell1;
@@ -40,6 +43,7 @@ public class AugmentRegistry
         brainImplant2 = new AugmentBrain(++id,"brainImplant2",2);
         brainImplant3 = new AugmentBrain(++id,"brainImplant3",3);
         brainImplant4 = new AugmentBrain(++id,"brainImplant4",4);
+        brainImplant5 = new AugmentBrain(++id,"brainInplant5",4);
         brainImplantCreative = new AugmentBrain(++id,"brainImplantCreative",5);
         energyCell0 = new AugmentEnergy(++id,"energyCell0",0);
         energyCell1 = new AugmentEnergy(++id,"energyCell1",1);
@@ -90,6 +94,31 @@ public class AugmentRegistry
             if(target.getTier()==tier && target.getTypeId()==type)
             {
                 return target;
+            }
+        }
+        return null;
+    }
+
+    public static List<Augment> getAllOfType(int type)
+    {
+        List<Augment> augments = new ArrayList<Augment>();
+        for(int i = 0; i < augmentList.size();i++)
+        {
+            if(augmentList.get(i).getTypeId()==type)
+            {
+                augments.add(augmentList.get(i));
+            }
+        }
+        return augments;
+    }
+
+    public static Augment getAugmentFromName(String name)
+    {
+        for(int i = 0; i < augmentList.size();i++)
+        {
+            if(augmentList.get(i).getAugmentName().equals(name))
+            {
+                return augmentList.get(i);
             }
         }
         return null;

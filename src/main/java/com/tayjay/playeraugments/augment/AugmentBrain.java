@@ -7,7 +7,7 @@ public class AugmentBrain extends Augment
 {
     public AugmentBrain(int id, String name, int tier)
     {
-        super(id, name, tier, 0);
+        super(id, name, tier, AugmentRegistry.Ids.BRAIN);
     }
 
     @Override
