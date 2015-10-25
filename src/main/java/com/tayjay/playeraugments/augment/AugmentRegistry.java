@@ -15,11 +15,13 @@ public class AugmentRegistry
     public static Augment brainImplant2;
     public static Augment brainImplant3;
     public static Augment brainImplant4;
+    public static Augment brainImplantCreative;
     public static Augment energyCell0;
     public static Augment energyCell1;
     public static Augment energyCell2;
     public static Augment energyCell3;
     public static Augment energyCell4;
+    public static Augment energyCellCreative;
 
 
     public static int totalAugments;
@@ -33,16 +35,18 @@ public class AugmentRegistry
     {
         int id = -1;
         /* 2: Initialize the object.*/
-        brainImplant0 = new Augment(++id,"brainImplant0",0,0);
-        brainImplant1 = new Augment(++id,"brainImplant1",1,0);
-        brainImplant2 = new Augment(++id,"brainImplant2",2,0);
-        brainImplant3 = new Augment(++id,"brainImplant3",3,0);
-        brainImplant4 = new Augment(++id,"brainImplant4",4,0);
-        energyCell0 = new Augment(++id,"energyCell0",0,6);
-        energyCell1 = new Augment(++id,"energyCell1",1,6);
-        energyCell2 = new Augment(++id,"energyCell2",2,6);
-        energyCell3 = new Augment(++id,"energyCell3",3,6);
-        energyCell4 = new Augment(++id,"energyCell4",4,6);
+        brainImplant0 = new AugmentBrain(++id,"brainImplant0",0);
+        brainImplant1 = new AugmentBrain(++id,"brainImplant1",1);
+        brainImplant2 = new AugmentBrain(++id,"brainImplant2",2);
+        brainImplant3 = new AugmentBrain(++id,"brainImplant3",3);
+        brainImplant4 = new AugmentBrain(++id,"brainImplant4",4);
+        brainImplantCreative = new AugmentBrain(++id,"brainImplantCreative",5);
+        energyCell0 = new AugmentEnergy(++id,"energyCell0",0);
+        energyCell1 = new AugmentEnergy(++id,"energyCell1",1);
+        energyCell2 = new AugmentEnergy(++id,"energyCell2",2);
+        energyCell3 = new AugmentEnergy(++id,"energyCell3",3);
+        energyCell4 = new AugmentEnergy(++id,"energyCell4",4);
+        energyCellCreative = new AugmentEnergy(++id,"energyCellCreative",5);
 
         totalAugments = id;
     }

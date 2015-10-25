@@ -1,10 +1,12 @@
 package com.tayjay.playeraugments.properties;
 
+import com.tayjay.playeraugments.augment.Augment;
 import com.tayjay.playeraugments.util.LogHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.World;
 import net.minecraftforge.common.IExtendedEntityProperties;
 
@@ -49,6 +51,7 @@ public class ExtendedPlayer implements IExtendedEntityProperties
         this.currentEnergy = 0;
         this.maxEnergy = 0;
         this.isAugmented = false;
+        player.sendPlayerAbilities();
     }
 
     public int getCurrentEnergy()
@@ -129,6 +132,16 @@ public class ExtendedPlayer implements IExtendedEntityProperties
 	*/
     @Override
     public void init(Entity entity, World world)
+    {
+
+    }
+
+    public boolean isAugmented()
+    {
+        return isAugmented;
+    }
+
+    public void addAugment(Augment augment)
     {
 
     }

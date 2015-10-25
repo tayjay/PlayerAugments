@@ -28,8 +28,9 @@ public class ModItems
     public static void init()
     {
         //augment = new ItemAugment();
-        brainImplant = new ItemBrainImplant();
         energyCell = new ItemEnergyCell();
+        brainImplant = new ItemBrainImplant();
+
     }
 
     /**
